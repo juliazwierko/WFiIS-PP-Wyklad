@@ -48,6 +48,13 @@ int main(void){
     printf("%d\n", wsk[4]);
     printf("%d\n", 4[wsk]);
     printf("%d\n", 4[tablica]);
+    
+    //instrukcja tworzy wskaźnik typu double, o nazwie fp, wskazujący na pierwszy element trójelementowej tablicy wartości typu double.
+    double *fp = (double []) {1.0, 2.0, 3.0};
+    printf("%f\n", *fp);
+    printf("%f\n", *(fp+1));
+    printf("%f\n", *(fp+2));
     printf("\n");
+    
     return 0;
 }
