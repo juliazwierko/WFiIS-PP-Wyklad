@@ -1,2 +1,0 @@
-# WFiIS-PP-Wyklad
-
