@@ -12,9 +12,7 @@ int main(int argc, char *argv[]) {
     // 12.3
     // 111
     // file1.txt
-  
-  
-    //WYPISYWANIE ARGUMENTOW W INNTY SPOSOB;
+
     //*p = true (NULL == 0);
     for(char **p = &argv[1]; *p; p++){
         printf("%s\n", *p);
@@ -22,9 +20,15 @@ int main(int argc, char *argv[]) {
     // 12.3
     // 111
     // file1.txt
-    
-    printf("%d, %lf\n", atoi(argv[2]), atof(argv[1]));
-    // 111, 12.300000
 
+    printf("\n");
+    for(char **pa = argv; *pa; pa++){
+            printf("%s\n", *pa);
+    }
+
+    printf("\n%c\n", argv[1][2]);
+    printf("%s\n", *(argv+1));
+    //. 
+    //12.3
     return 0; 
 }
