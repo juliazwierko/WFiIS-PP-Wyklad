@@ -2,20 +2,22 @@
 #include <stdio.h>
 #include <string.h>
 
-#define SIZ 4
+int main(int argc, char *argv[]) {
 
-int main() {
-    //Tablice lsncichow
-    //1
-    char planets[][8] = {"Mercury", "Venus", " Earth", "Mars", "Jupiter", "Saturn", " Uranus", "Neptune"};
+    char planets[][8] = {"mercury", "yoo", "maczek"};
+    puts(*planets+8);
+    printf("%lu\n", strlen(*planets+8));
+    /*
+        yoo
+        3
+    */
 
-    puts(planets[0]);
-    printf("%lu\n", strlen(planets[1]));
-
-    //2
-    char *planets_2[] = {"Mercury", "Venus", "Earth ", "Mars", "Jupiter", "Saturn", "Uranus", " Neptune"};
-    puts(planets_2[0]);
-    printf("%lu\n", strlen(planets_2[1]));
- 
+    char *planet[] = {"Mercury", "yoo", "maczek"};
+    puts(*planet);
+    printf("%lu\n", strlen(*planet));
+    /*
+        Mercury
+        7
+    */
     return 0; 
 }
