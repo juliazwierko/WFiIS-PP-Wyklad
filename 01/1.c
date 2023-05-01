@@ -34,3 +34,6 @@ int main(void){
     printf("W:pi=%p, pj=%p, i=%d\n", pi, pj, i);
     return 0;
 }
+// A: &pi=0x16d9ab360, &pj=0x16d9ab358, &i=0x16d9ab368
+// W: pi=0x16d9ab368, pj=0x16d9ab368, i=123
+// W: *pi = 123, *pj = 123
