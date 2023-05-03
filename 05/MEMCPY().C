@@ -5,7 +5,6 @@
 
 int main() {
     //memcpy()
-
 //1
     char source[] = "lubie cynamonki";
     char dest[4];
@@ -27,7 +26,7 @@ int main() {
         p = NULL;
     }
 
-//2 . BARDZO WAZNIE!
+//2 BARDZO WAZNIE!
     char d[7], s[] = {'h','o', 't', '\0', 't', 'e', 'a'};
     memcpy(d,s,3);  //’h’,’o’,’t’ 
     memcpy(d,s,4);  //’h’,’o’,’t’,’\0’ 
