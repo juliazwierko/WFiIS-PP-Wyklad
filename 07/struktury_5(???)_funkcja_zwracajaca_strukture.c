@@ -12,6 +12,7 @@ struct item {
     int id; char name[40]; int os;
 };  //deklaracja struktury
 
+
 struct item build_it(int n, const char *name, int ns){
     struct item temp; //zmienna tymczasowa
 
@@ -20,6 +21,7 @@ struct item build_it(int n, const char *name, int ns){
     temp.os = ns;
     return temp;
 }
+
 
 int main(void){
     struct item it1 = build_it(914, "Printer cable", 57);
