@@ -1,1 +1,1 @@
-wyklad 7 - strona 33.
+Wyklad 8.
