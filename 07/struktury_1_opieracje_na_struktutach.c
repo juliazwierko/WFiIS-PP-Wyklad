@@ -1,67 +1,51 @@
-#include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
-struct {
+struct jeden{
     int id;
-    char name[40]; 
+    char name[40];
     int os;
-}   item1 = {.id = 528, .name = "Hard drive", .os = 100},
-    item2 = {914, "Printer cable", 57};
+}   item4,
+    item5 = { .id = 528, .name = "Hard drive", .os = 100}; // standart C99
 
-struct tablica { int arr[5];} t1, t2;
+int main (int argc, char **argv){
+    //WYPISANIE
+    printf("Item5 id: %d\n", item5.id);
+    printf("Item5 name: %s\n", item5.name);
+    printf("Item quanity: %d\n", item5.os);
+    printf("\n\n");
 
-int main(void){
+    //ZMIENIAMY DANE 
+    item5.id = 100;
+    strcpy(item5.name, "Aniołek");
+    item5.os = 100;
+    printf("Item5 id: %d\n", item5.id);
+    puts(item5.name);
+    printf("Item5 quanity: %d\n\n\n", item5.os);
 
-    printf("Item id: %d\n", item1.id);
-    printf("Item name: %s\n", item1.name);
-    printf("Item quantity: %d\n\n", item1.os);
-    //pola struktury sa l-wartosciami:
-    item1.id = 767;
-    item1.os++;
-    //scanf("%d", &item1.id);
-    printf("Item id1: %d\n", item1.id);
-    printf("Item name1: %s\n", item1.name);
-    printf("Item quantity1: %d\n\n", item1.os);
+    //PRZYPISANIE JEDNEJ STRUKTURY DO DRUGIEJ
+    item4 = item5;
+    printf("Item4 id: %d\n", item4.id);
+    puts(item5.name);
+    printf("Item4 quanity: %d\n\n\n", item4.os);
 
-    item2 = item1;
-    printf("Item id2: %d\n", item1.id);
-    printf("Item name2: %s\n", item1.name);
-    printf("Item quantity2: %d\n\n", item1.os);
-
-    int a = 0;
-    for(size_t i = 0; i < 5; i++){
-        *(t1.arr+i) =  a++;
-        printf("tab[i] - %zu\n", i,  (t1.arr +i));
-    }
-    printf("\n");
-    t2 = t1;
-    for(size_t i = 0; i < 5; i++){
-        *(t2.arr+i) =  a++;
-        printf("tab[i] - %zu\n", i,  (t1.arr +i));
-    }
+    //DEKLARACJA ZMIENNYCH STRUKTURALNYCH
+    struct jeden item1, item2;
+    struct jeden item3 = {18, "Julka", 18};
+    item1 = item2 = item3;
     return 0;
 }
-// Item id: 528
-// Item name: Hard drive
-// Item quantity: 100
+// Item5 id: 528
+// Item5 name: Hard drive
+// Item quanity: 100
 
-// Item id1: 767
-// Item name1: Hard drive
-// Item quantity1: 101
 
-// Item id2: 767
-// Item name2: Hard drive
-// Item quantity2: 101
+// Item5 id: 100
+// Aniołek
+// Item5 quanity: 100
 
-// tab[i] - 0
-// tab[i] - 1
-// tab[i] - 2
-// tab[i] - 3
-// tab[i] - 4
 
-// tab[i] - 0
-// tab[i] - 1
-// tab[i] - 2
-// tab[i] - 3
-// tab[i] - 4
+// Item4 id: 100
+// Aniołek
+// Item4 quanity: 100
