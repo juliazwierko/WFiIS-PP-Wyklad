@@ -1,1 +1,2 @@
 1) dwie struktury - dwi zmienne ocobne. Pytanie o przepisaniu jednej zmiennej do drugiej;
+2) wyrownanie granic. biblioteka  //biblioteka <stddef.h> //size t offsetof(type, member)
