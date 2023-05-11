@@ -17,10 +17,9 @@ int liczba(int a){
     return a;
 }
 
-int adres(int *a){
+int* adres(int *a){
     int *b = a;
-    //*b = 100;
-    return *b;
+    return b;
 }
 
 struct jeden{
@@ -34,9 +33,11 @@ int main (int argc, char **argv){
     int qi = liczba(item5.id);
     printf("qi = %d\n", qi);
 
-    int qa = adres(&item5.id);
-    printf("qa = %d\n", qa);
+    int *qa = adres(&item5.id);
+    printf("qa = %p\n", qa);
+    printf("qa = %p\n", &item5.id);
     return 0;
 }
 // qi = 528
-// qa = 528
+// qa = 0x1006ec000
+// qa = 0x1006ec000
