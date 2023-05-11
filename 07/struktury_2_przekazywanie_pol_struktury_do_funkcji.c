@@ -9,9 +9,19 @@
 // Deklaracja:int put on shelf(int*);
 // Wywołanie:int iq = put on shelf(&item1.on shelf); Przykład.
 // Wywołanie:scanf(”%d”,&item1.on shelf);
-
 #include <stdio.h>
 #include <string.h>
+
+//Deklaracja funkcji
+int liczba(int a){
+    return a;
+}
+
+int adres(int *a){
+    int *b = a;
+    //*b = 100;
+    return *b;
+}
 
 struct jeden{
     int id;
@@ -21,7 +31,12 @@ struct jeden{
     item5 = { .id = 528, .name = "Hard drive", .os = 100}; // standart C99
 
 int main (int argc, char **argv){
-    int qi = is_on_shelf(item5.os);
+    int qi = liczba(item5.id);
     printf("qi = %d\n", qi);
+
+    int qa = adres(&item5.id);
+    printf("qa = %d\n", qa);
     return 0;
 }
+// qi = 528
+// qa = 528
