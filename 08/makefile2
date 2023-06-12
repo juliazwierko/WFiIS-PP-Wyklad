@@ -1,0 +1,10 @@
+//Zawartość pliku makefile:
+lista.exe: main.o lista.o
+gcc -o lista.exe lista.o main.o -Wall lista.o: lista.c lista.h
+gcc -c -g lista.c -Wall main.o: main.c lista.h
+gcc -c -g main.c -Wall
+
+//Modyfikujemy plik lista.h i uruchomiamy make 
+//gcc -c -g main.c -Wall 
+//gcc -c -g lista.c -Wall
+//gcc -o lista.exe main.o lista.o
