@@ -1,0 +1,32 @@
+//OPERACJE NA PLIKACH 
+*Plik - jednostka logiczna przechowywania danych w pamięci masowej.
+
+*Plik - ciąg (zbiór) danych identyfikowany nazwą, o skończonej długości, 
+        posiadający szereg atrybutów i stanowiący dla systemu operacyjnego całość.
+
+*Plik binarny – plik zawierający dowolny ciąg danych zakodowany w systemie binarnym.
+                Podstawowa jednostka danych to 1 bajt.
+
+*Pliki binarne to wszystkie pliki, które nie są plikami tekstowymi.
+
+*Plik tekstowy - plik zawierający tekst zapisany w ustalonym sposobie kodowania
+                 znaków drukarskich (np. ASCII, Unicode) wraz z kodami sterującymi, 
+                 w tym także kod znaku końca pliku EOF (end-of-file).
+
+*Plik tekstowy to ciąg znaków z podziałem na wiersze. Podstawowa jednostka danych 
+               to jeden znak.
+
+*Jeden znak zakodowany w standardzie ASCII to 1 bajt.
+
+*Jeden znak zakodowany w standardzie Unicode to dwa bajty lub więcej.
+
+Koniec linii (end of line, EOL) – znak lub sekwencja znaków 
+oznaczająca zakończenie wiersza w pliku tekstowym.
+
+W systemach opartych na kodowaniu ASCII są to kombinacje kodów 
+CR (carriage return 0x0D) i LF (line feed 0x0A):
+    *LF - \n – w systemach UNIX/Linux, MacOS, 
+    *CRLF - \r\n – w systemach Windows.
+EOF -znak końca pliku:
+    *CTRL-D – w systemach UNIX/Linux, MacOS, 
+    *CTRL-Z – w systemach Windows.
