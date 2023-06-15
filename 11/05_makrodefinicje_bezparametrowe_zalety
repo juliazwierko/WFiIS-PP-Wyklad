@@ -1,0 +1,10 @@
+->zwiększają czytelność kodu programu - unikamy kodu pełnego ”magicznych liczb”.
+
+->ułatwiają modyfikacje kodu programu - zmiana wartości w jednym miejscu 
+  #define MAX TAB 1234, skutkuje modyfikacją wartości w każdym wystąpieniu MAX TAB.
+  
+->pomagają uniknąć niespójności i literówek -
+  #define PI NUMB 4*atan(1), zamiast 3.14195 czy 2.14159.
+ 
+->umożliwiają sterowanie kompilacją warunkową programu.
+
