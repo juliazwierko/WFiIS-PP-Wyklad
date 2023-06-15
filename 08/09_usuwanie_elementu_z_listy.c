@@ -68,7 +68,7 @@ node *search_w(node *elem, int key){
 }
 
 //Usuwanie elementu z listy
-node *del_nod(node *head, int key){
+node *del_node(node *head, int key){
     node *cur = head, *prev = NULL;
     for(;cur && cur->value != key; prev = cur, cur = cur->next);
 
@@ -83,21 +83,16 @@ node *del_nod(node *head, int key){
 }
 
 int main(){
-    //wywolanie funkcji
     node *head = insert_item_begin(NULL, 6);
           head = insert_item_begin(head, 16);
-
-    //wywolanie funkcji dla wypisywania 
-    print_list(head);
-    printf("\n");
-
-    //wywolanie funkcji dla usuwania wszystkich elementow
-    head = delete_all(head);
-
-    //wywolanie funkcji usuwania ELEMENTU z listy
-    int key = 12;
-    head = del_nod(head, key); //na wykladzie podano "head=del_nod(head, key);"
-
+        //   head = insert_item_begin(head, 26);
+        //          insert_item_end(&head, 126);
+          head = insert_item_end_scnd(head, 226); //Przed
+          head = del_node(head, 6); // Usuwamy 6
+          head = del_node(head, 26); // Usuwamy 26
+          head = delete_all(head);
     printf("\n");
     return 0;
 }
+// Usuwam element 0x11d606780.
+// Usuwam element 0x11d606790.
