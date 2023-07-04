@@ -9,4 +9,3 @@ hw_hello.o: hw_hello.c hw_defs.h
 
 hw_power.o: hw_power.c hw_defs.h 
             gcc -c -Wall hw_power.c -lm
-
