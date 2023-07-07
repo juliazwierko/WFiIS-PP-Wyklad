@@ -1,16 +1,3 @@
-/*
-W programie mamy zdefiniowane struktury:
-------------------------------------------
-struct table{
-    int len; //dlugsc tablicy tt 
-    double* tt;
-};
-struct data{
-    char name[15];//przechowuje nazwe
-    struct table tab;
-};
-*/ 
-
 #include <stdio.h>
 
 struct data {char name[15];//przechowuje nazwe tablicy tt
@@ -35,10 +22,10 @@ int comp(const void* p1, const void* p2)
 
 int main(int argc, char *argv[]){
     //ilosc elementow TABLICA;
-    int count = (argc - 1)/2; 😭😭😭
+    int count = (argc - 1)/2;
 
     //utworzenie dynamicznie tablicy TABLICA struktur struct data
-    struct data *TABLICA = malloc(sizeof(struct data)*count); 😭😭😭
+    struct data *TABLICA = malloc(sizeof(struct data)*count); 
 
     //wypelnienie pol name, len argumientami wywolania programu oraz 
     //utworzenie tablic tt 
