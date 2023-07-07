@@ -17,7 +17,7 @@ int comp(const void* p1, const void* p2)
     double sum1 = sum(d1->tab.tt, d1->tab.tt + d1->tab.len);
     double sum2 = sum(d2->tab.tt, d2->tab.tt + d2->tab.len);
 
-    return sum1-sum2;
+    return (int)(sum1-sum2);
 }
 
 int main(int argc, char *argv[]){
