@@ -34,6 +34,7 @@ int main(int argc, char *argv[]){
         strcpy((TABLICA + i).name, argv[c]);
         TABLICA.tab.len = atoi(argv[c+1]);
         TABLICA.tab.tt = malloc(sizeof(double) * TABLICA.tab.len);
+        c++;
     }
 
     double var;
