@@ -19,18 +19,7 @@ void write_char(const char *fname, long pos, char ch) {
     // Przechodzimy do zadanej pozycji w pliku
     if (fseek(file, pos, SEEK_SET) != 0) {
         // Jeśli nie udało się ustawić pozycji, sprawdzamy, czy to z powodu końca pliku
-        fseek(file, 0, SEEK_END);
-        long file_size = ftell(file);
-        if (file_size < pos) {
-            // Pozycja jest poza istniejącą zawartością pliku, dopisujemy na koniec
-            for (long i = file_size; i < pos; i++) {
-                fputc('\0', file);  // Wypełniamy puste znakiami '\0' do żądanej pozycji
-            }
-        } else {
-            printf("Błąd podczas ustawiania pozycji w pliku.\n");
-            fclose(file);
-            return;
-        }
+        fseek(file, 0, SEEK_END);     
     }
     // Zapisujemy znak na aktualnej pozycji w pliku
     fputc(ch, file);
