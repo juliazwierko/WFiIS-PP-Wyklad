@@ -13,7 +13,7 @@ void zapisz_tablice_do_pliku(void *tablica, size_t rozmiar_elementu, size_t ilos
 
 int main() {
     // Przykład użycia dla tablicy 'tab1' typu char
-    char tab1[15] = "Przykladowy tekst";
+    char tab1[15] = "Пистолетик";
     FILE *plik1 = fopen("tablica1.bin", "wb");
     zapisz_tablice_do_pliku(tab1, sizeof(char), 15, plik1);
     fclose(plik1);
